@@ -1,0 +1,11 @@
+service: translate
+provider:
+    name: aws
+    runtime: python3.8
+    region: us-east-1
+functions:
+    app:
+        handler: app.handler
+        url: true
+plugins:
+    - serverless-python-requirements
